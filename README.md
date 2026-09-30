@@ -9,6 +9,15 @@
 [![Optuna](https://img.shields.io/badge/Optuna-Bayesian%20Tuning-blueviolet.svg)](https://optuna.org/)
 [![SHAP](https://img.shields.io/badge/SHAP-Explainable%20AI-orange.svg)](https://shap.readthedocs.io/)
 
+---
+
+> ### 🌐 **Live Interactive Web Demo**
+> Try AutoDataScientist directly in your browser without installing anything:  
+> 🔗 **[Launch Live Demo on Streamlit Cloud](https://autodata-scientist.streamlit.app)**  
+> *(1-Click Deploy Launcher: [Open in Streamlit Community Cloud](https://share.streamlit.io/deploy?repository=ankitpatidar3739/AutoData-Scientist&branch=main&mainModule=app.py))*
+
+---
+
 **AutoDataScientist** is an autonomous multi-agent system that simulates a senior Machine Learning & Deep Learning engineering team. Ingesting any raw tabular or time-series dataset, it autonomously profiles data quality, eliminates target leakage, architects custom PyTorch Deep Learning networks alongside LightGBM baselines, and executes training pipelines in a self-healing sandbox.
 
 ---
@@ -86,16 +95,16 @@ autodata-scientist/
 
 ### 1. Installation
 ```bash
-git clone https://github.com/your-username/autodata-scientist.git
-cd autodata-scientist
+git clone https://github.com/ankitpatidar3739/AutoData-Scientist.git
+cd AutoData-Scientist
 pip install -r requirements.txt
 ```
 
 ### 2. Run the Interactive Web Dashboard
 ```bash
-streamlit run src/ui/app.py
+streamlit run app.py
 ```
-Open your browser at `http://localhost:8501`, select a curated sample dataset (or upload your own CSV), and click **Launch Autonomous Agent Team**.
+Open your browser at `http://localhost:8501`, select a curated sample dataset (or upload your own CSV), and click **Launch Automated ML Pipeline & Hyperparameter Tuning**.
 
 ### 3. Run via CLI / Programmatic API
 ```python
@@ -122,10 +131,13 @@ pytest tests/ -v
 
 ## 🔬 Benchmark Comparison Example (Customer Churn)
 
-| Architecture | Train ROC-AUC | Val ROC-AUC | Test ROC-AUC (Unseen) | Key Feature |
+| Architecture | Train ROC-AUC | Val ROC-AUC | Test ROC-AUC (Unseen) | Key Paradigm |
 | :--- | :--- | :--- | :--- | :--- |
-| **PyTorch TabularDeepNet** | 0.8621 | 0.8412 | **0.8435** | Entity Embeddings + Residuals |
-| **LightGBM Baseline** | 0.8950 | 0.8350 | **0.8380** | Gradient Boosted Decision Trees |
+| **PyTorch TabularDeepNet** | 0.8621 | 0.8412 | **0.8435** | Entity Embeddings + Residual MLP |
+| **LightGBM** | 0.8950 | 0.8350 | **0.8380** | Gradient Boosted Decision Trees |
+| **CatBoost** | 0.8870 | 0.8385 | **0.8410** | Ordered Boosting + Symmetric Trees |
+| **Random Forest** | 0.8510 | 0.8290 | **0.8315** | Bagging Ensemble |
+| **Grandmaster Blend** | - | 0.8490 | **0.8512** | Meta-Ensemble Soft-Voting |
 
 ---
 
